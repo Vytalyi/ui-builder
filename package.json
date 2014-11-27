@@ -1,0 +1,17 @@
+{
+  "name": "ui-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Vitalii Denysenko",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.9.3",
+    "express": "^4.10.4",
+    "hbs": "^2.7.0",
+    "method-override": "^2.3.0"
+  }
+}
