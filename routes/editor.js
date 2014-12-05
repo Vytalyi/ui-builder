@@ -2,10 +2,16 @@ module.exports = {
 
     init: function (app) {
         app.get('/editor-api/inject/', this.allowCrossDomain, this.redirectToInjectionScript);
+
+        app.get('/editor-api/editor/', this.allowCrossDomain, this.redirectToEditorPage);
     },
 
     redirectToInjectionScript: function (req, res) {
-        res.redirect('/js/editor.js?nocache=' + (new Date().getTime()));
+        res.redirect('/js/editor-injector.js?nocache=' + (new Date().getTime()));
+    },
+
+    redirectToEditorPage: function(req, res) {
+        res.render('editor');
     },
 
     allowCrossDomain: function(req, res, next) {
