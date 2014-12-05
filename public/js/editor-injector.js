@@ -29,7 +29,7 @@
 
             w.postMessage(
                 JSON.stringify(msg),
-                "http://localhost:5000"
+                api.getAppDomain()
             );
 
             e.preventDefault();
@@ -76,6 +76,10 @@
             var src = document.querySelector('script[src$="editor-api/inject"]').getAttribute('src');
             src = src.replace("/inject", "/");
             return src;
+        };
+
+        API.prototype.getAppDomain = function() {
+            return this.getAppBaseUrl().replace("editor-api", "");
         };
 
         return ( new API() );
