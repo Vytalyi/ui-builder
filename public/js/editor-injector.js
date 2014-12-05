@@ -75,6 +75,7 @@
         API.prototype.getAppBaseUrl = function() {
             var src = document.querySelector('script[src$="editor-api/inject"]').getAttribute('src');
             src = src.replace("/inject", "/");
+            src = location.protocol + "" + src;
             return src;
         };
 

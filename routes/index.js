@@ -10,7 +10,7 @@ module.exports = {
 
     getIndex: function (req, res) {
         res.render('index', {
-            editorPath: req.protocol + '://' + req.get('host')
+            editorPath: '//' + req.get('host')
         });
     }
 
